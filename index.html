@@ -57,7 +57,18 @@
             <div class="projets">
                     <div class="contour-img-princ" id="img-g">
                         <div class="img-princ">
-                            <p>Projet ISN</p>
+                            <h1>Projet ISN</h1>
+                            <div id="contenup1">
+                                <span id="quit" class="glyphicon glyphicon-arrow-left"></span>
+                                <p class="imgprinctxt">J'ai réalisé ce projet en Terminale, pour la spécialité ISN. </p>
+                                <p>Il s'agit d'un shoot 'em up réalisé avec python et l'aie de la bibliothéque pygames.</p>
+                                <p>Il est composé d'un mode solo ainsi que d'un mode deux joueurs. Le pattern d'appartition des ennemis est trés facilement configurable grâce à un systéme de matrice.</p>
+                                <p>Capture d'écran du jeu : </p>
+                                <img src="images/projet1.png" height=50% >
+                                <p>Vous voulez l'essayer ?</p>
+                                <p>Lien de téléchargement :</p>
+                                <span href="https://drive.google.com/open?id=0B3W6Caflv6DnOTNtanRaNWxoeFk" class="glyphicon glyphicon-save"></span>
+                            </div>
                         </div>
                     </div>
                     <div class="le-reste">
@@ -107,24 +118,8 @@
                 </div>
             </div>
             <div class="Contact">
-                <h2>Simple PHP Contact Form</h2>
-                <div class="contactFrm">
-                    <?php if(!empty($statusMsg)){ ?>
-                        <p class="statusMsg <?php echo !empty($msgClass)?$msgClass:''; ?>"><?php echo $statusMsg; ?></p>
-                    <?php } ?>
-                    <form action="" method="post">
-                        <h4>Name</h4>
-                        <input type="text" name="name" placeholder="Your Name" required="">
-                        <h4>Email </h4>
-                        <input type="email" name="email" placeholder="email@example.com" required="">
-                        <h4>Subject</h4>
-                        <input type="text" name="subject" placeholder="Write subject" required="">
-                        <h4>Message</h4>
-                        <textarea name="message" placeholder="Write your message here" required=""> </textarea>
-                        <input type="submit" name="submit" value="Submit">
-                        <div class="clear"> </div>
-                    </form>
-                </div>
+                
+                
             </div>
         </div>
     </main>
@@ -139,9 +134,10 @@
         var pactu = 1;
         var state=0;
         var compactu=5;
+        var deploye=0;
         $(document).ready(function() {
             $(".present").fadeIn(5000);
-            $("#img-g").animate({left: '-100vw'});
+            $("#img-g").animate({left: '-100vw'},'slow');
             $("#img-db").animate({right: '-100vw'},'slow');
             $("#img-dh").animate({right: '-100vw'},'slow');
             $(".i6").animate({left: '-100vw'});
@@ -153,46 +149,46 @@
             if (state==0){
                 $(".img-princ").css({"transform":  "skew(0deg,0deg)"});
                 $(".contour-img-princ").css({"transform":  "skew(0deg,0deg)"});
-                $('.le-reste').fadeOut(500);
+                $('.le-reste').fadeOut(10);
                 $(".contour-img-princ").css({"width":  "100vw"});
                 $(".contour-img-princ").css({"height":  "100vh"});
                 $(".img-princ").css({"height":  "100vh"});
                 $(".img-princ").css({"left":  "0vh"});
                 $(".contour-img-princ").css({"margin-left":  "0"});
                 $("#projecaption").css({"display": "none"});
-                state=1;
+                $("#contenup1").css({"display": "block"});
                 $('html,body').animate({scrollTop: $(".img-princ").offset().top},'slow');
-            }else {
+            } else {
                 $(".img-princ").css({"transform":  "skew(7deg,0deg)"});
                 $(".contour-img-princ").css({"transform":  "skew(-7deg,0deg)"});
-                $('.le-reste').fadeIn(500);
-                $(".contour-img-princ").css({"width":  "75.5%;"});
-                $(".contour-img-princ").css({"height":  "74vh"});
+                $('.le-reste').fadeIn(10);
+                $(".contour-img-princ").animate({width:  "75.5%;"});
+                $(".contour-img-princ").animate({height:  "74vh"});
                 $(".img-princ").css({"height":  "74vh"});
                 $(".img-princ").css({"left":  "50px"});
                 $(".contour-img-princ").css({"margin-left":  "-35%"});
                 $("#projecaption").css({"display": "block"});
                 state=0;
-                $('html,body').animate({scrollTop: $("#projecaption").offset().top},'slow');
             }
-            
-            
-            
-            
-            
+        });
+        $("#quit").click(function(){
+            state=1;
         });
         function projetanimation(){
-            $("#img-g").animate({left: '0vw'},'slow');
+            $("#img-g").animate({left: '-1vw'},'slow');
             $("#img-db").animate({right: '-1vw'},500);
             $("#img-dh").animate({right: '-1vw'},'slow');
         }
-        
+        function projetanimationgby(){
+            $("#img-g").animate({left: '-100vw'},'slow');
+            $("#img-db").animate({right: '-100vw'},500);
+            $("#img-dh").animate({right: '-100vw'},'slow');
+        }
         //Configuration navbar
         
         $("#BtnProj").click(function(){
                 pactu=2;
                 $('html,body').animate({scrollTop: $("#P2").offset().top},'slow');
-                projetanimation();
         });
         $("#BtnComp").click(function(){
                 pactu=3;
@@ -276,66 +272,30 @@
         //Configuartion du "siteweb-diapo"
         
         var targetpro = $(".deux-reste").offset().top;
-        var targetfinpro = $("#Comptext").offset().top;
+        var targetfinpro = $(".Contact").offset().top;
         $(window).scroll(function() {
-            if ($(window).scrollTop() >= targetpro) {
-                if (targetfinpro >= $(window).scrollTop()) {
-                    projetanimation();
+            h=$(window).scrollTop()
+            if ( h >= targetpro) {
+                if (targetfinpro >= h) {
+                    if (deploye==0){
+                        projetanimation();
+                        deploye=1;
+                    };
                 } else {
-                    projetanimationgby();
+                    if (deploye==1){
+                        projetanimationgby();
+                        deploye=0;
+                    };
                 };
+            } else {
+                if (deploye==1){
+                        projetanimationgby();
+                        deploye=0;
+                    };
             };
         });
 
     
     </script>
-    <php
-        $statusMsg = '';
-        $msgClass = '';
-        if(isset($_POST['submit'])){
-            // Get the submitted form data
-            $email = $_POST['email'];
-            $name = $_POST['name'];
-            $subject = $_POST['subject'];
-            $message = $_POST['message'];
-
-            // Check whether submitted data is not empty
-            if(!empty($email) && !empty($name) && !empty($subject) && !empty($message)){
-
-                if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
-                    $statusMsg = 'Please enter your valid email.';
-                    $msgClass = 'errordiv';
-                }else{
-                    // Recipient email
-                    $toEmail = 'emilien.maintenay@gmail.com';
-                    $emailSubject = 'Contact Request Submitted by '.$name;
-                    $htmlContent = '<h2>Contact Request Submitted</h2>
-                        <h4>Name</h4><p>'.$name.'</p>
-                        <h4>Email</h4><p>'.$email.'</p>
-                        <h4>Subject</h4><p>'.$subject.'</p>
-                        <h4>Message</h4><p>'.$message.'</p>';
-
-                    // Set content-type header for sending HTML email
-                    $headers = "MIME-Version: 1.0" . "\r\n";
-                    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-                    // Additional headers
-                    $headers .= 'From: '.$name.'<'.$email.'>'. "\r\n";
-
-                    // Send email
-                    if(mail($toEmail,$emailSubject,$htmlContent,$headers)){
-                        $statusMsg = 'Your contact request has been submitted successfully !';
-                        $msgClass = 'succdiv';
-                    }else{
-                        $statusMsg = 'Your contact request submission failed, please try again.';
-                        $msgClass = 'errordiv';
-                    }
-                }
-            }else{
-                $statusMsg = 'Please fill all the fields.';
-                $msgClass = 'errordiv';
-            }
-        }
-    ?>
 </body>
 </html>

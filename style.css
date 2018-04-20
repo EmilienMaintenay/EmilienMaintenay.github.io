@@ -105,6 +105,12 @@ body{
     width: 100%;
     transform:  skew(7deg,0deg);
 }
+#img-g{
+    left=-100vw;
+}
+#img-db, #img-dh{
+    right=100vw;
+}
 .un-reste{
     background-color: green;
     height: 32vh;
@@ -123,7 +129,6 @@ body{
     overflow: hidden;
     width: 76.5%;
     transform: skew(-7deg,0deg);
-    transition: .5s;
 }
 .le-reste{
     min-height: 74vh;
@@ -147,6 +152,9 @@ body{
     transform: skew(7deg,0deg);
 }
 
+#contenup1{
+    display: none;
+}
 /* STYLE POUR LES COMPETENCES */
 .competences-div{
     height: 100vh;
