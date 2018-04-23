@@ -1,0 +1,123 @@
+body {
+    background-image: url(images/flou.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#dansMain {
+    position: relative;
+    top:100px;
+}
+
+@font-face {
+    font-family: 'THW';
+    src: url('webfontkit/toms_handwritten_new-webfont.woff2') format('woff2'),
+         url('webfontkit/toms_handwritten_new-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.navbar-inverse {
+    background-color: #222;
+}
+
+
+
+h1 {
+    position: relative;
+    color: white;
+    font-family: THW;
+    text-align: center;
+    font-size: 150px;
+}
+h4{
+    position: relative;
+    color: white;
+    font-family: THW;
+    text-align: center;
+    font-size: 50px;
+}
+
+.btn-segondary {
+    background-color: transparent;
+    color:white;
+    width: 140px;
+    height: 100px; 
+    border-color: transparent;
+    font-size: 25px;
+    font-family: THW;
+    position: relative;
+    left: 50%;
+    margin-left: -70px;
+} 
+
+.btn-primary {
+    background-color: transparent;
+    color:white;
+    width: 290px;
+    height: 200px; 
+    border-color: transparent;
+    font-size: 50px;
+    font-family: THW;
+    position: relative;
+    right: 55px;
+}
+
+.glyphicon-tree-deciduous, .glyphicon-picture, .glyphicon-leaf {
+    color:black;
+}
+
+.btn-primary #p1 {
+    position: relative;
+}
+
+.btn-primary #p2 {
+    position: relative;
+}
+
+.btn-primary #p3 {
+    position: relative;
+}
+
+#logo {
+    position: relative;
+    left: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-primary:hover{
+    background-color: transparent;
+    border-color: rgb(33,171,12);
+}
+
+.navbar-collapse {
+    position: relative;     
+    font-size: 20px;
+    font-family:monospace;
+    right: 120px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

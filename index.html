@@ -31,7 +31,7 @@
                         <li id="BtnProj"><a href="#P2">Projets</a></li>
                     </ul>
                     <div class="navbar-brand hidden-xs">
-                            <img class="logo img-fluid rounded-circle" src="images/moi.jpg" alt="Logo">
+                            <img class="logo img-fluid rounded-circle" src="images/Fafafy.jpg" alt="Logo">
                     </div>
                     <ul class="nav navbar-nav navbar-right">
                         <li id="BtnComp"><a href="#P3">Compétences</a></li>
@@ -47,6 +47,7 @@
         <div class="present" >
             <h1>Maintenay Emilien</h1>
             <p>Actuellement en premiére année de DUT Informatique à Lannion, je recherche une alternance afin d'acquérir une expérience professionnelle le plus tôt possible.</p>
+            <a class="btn btn-primary" href="images/cv70.pdf" role="button">CV</a>
         </div>
         <div class="projet-div" id="P2">
             <div class="titre" id="projecaption">
@@ -61,23 +62,35 @@
                             <div id="contenup1">
                                 <span id="quit" class="glyphicon glyphicon-arrow-left"></span>
                                 <p class="imgprinctxt">J'ai réalisé ce projet en Terminale, pour la spécialité ISN. </p>
-                                <p>Il s'agit d'un shoot 'em up réalisé avec python et l'aie de la bibliothéque pygames.</p>
+                                <p>Il s'agit d'un shoot 'em up réalisé avec python la bibliothéque pygames.</p>
                                 <p>Il est composé d'un mode solo ainsi que d'un mode deux joueurs. Le pattern d'appartition des ennemis est trés facilement configurable grâce à un systéme de matrice.</p>
-                                <p>Capture d'écran du jeu : </p>
-                                <img src="images/projet1.png">
+                                <div id="projetpic">
+                                    <p>Capture d'écran du jeu : </p>
+                                    <img src="images/projet1.png">
+                                </div>
                                 <p>Vous voulez l'essayer ?</p>
                                 <p>Lien de téléchargement :</p>
-                                <span href="https://drive.google.com/open?id=0B3W6Caflv6DnOTNtanRaNWxoeFk" class="glyphicon glyphicon-save"></span>
+                                <a href="https://drive.google.com/open?id=0B3W6Caflv6DnOTNtanRaNWxoeFk">
+                                    <span id="dl"  class="glyphicon glyphicon-save"></span>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="le-reste">
-                        <div class="contour-le-reste" id="img-dh">
-                            <div class="un-reste"></div>
-                        </div>
-                        <div class="contour-le-reste" id="img-db" >
-                            <div class="deux-reste" ><h1> Projet Web</h1></div>
-                        </div>
+                        <a href="ProjetJardin/Accueil.html">
+                            <div class="contour-le-reste" id="img-dh">
+                                <div class="un-reste">
+                                        <h1>Site jardinage</h1>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="ProjetProfessionnel/Accueil.html">
+                            <div class="contour-le-reste" id="img-db" >
+                                <div class="deux-reste" >
+                                    <h1>Site projet PPP</h1>
+                                </div>
+                            </div>
+                        </a>
                     </div>  
             </div>
         </div>
@@ -168,6 +181,10 @@
                 $("#projecaption").css({"display": "none"});
                 $("#contenup1").css({"display": "block"});
                 $('html,body').animate({scrollTop: $(".img-princ").offset().top},'slow');
+                $(".img-princ p").css({"display": "block"});
+                $(".img-princ img").css({"display": "block"});
+                $(".img-princ span").css({"display": "block"});
+                $(".img-princ h1").css({"margin-top": "1vh" });
             } else {
                 $(".img-princ").css({"transform":  "skew(7deg,0deg)"});
                 $(".contour-img-princ").css({"transform":  "skew(-7deg,0deg)"});
@@ -178,6 +195,10 @@
                 $(".img-princ").css({"left":  "50px"});
                 $(".contour-img-princ").css({"margin-left":  "-35%"});
                 $("#projecaption").css({"display": "block"});
+                $(".img-princ p").css({"display": "none"});
+                $(".img-princ img").css({"display": "none"});
+                $(".img-princ span").css({"display": "none"});
+                $(".img-princ h1").css({"margin-top": "31vh" });
                 state=0;
             }
         });
@@ -214,7 +235,7 @@
         $("#btnlft").click(function(){
             if (compactu==5){
                 $('#Comptext').fadeOut(500, function() {
-                    $(this).text("Language de programmation").fadeIn(1500);
+                    $(this).text("Languages de programmation").fadeIn(1500);
                 });
                 $('.i5').animate({left: '-100vw'});
                 $(".i5").fadeOut(0);
@@ -258,7 +279,7 @@
                 $(".i6").animate({left: '0px'});
             } else if (compactu==6){
                 $('#Comptext').fadeOut(500, function() {
-                    $(this).text("Language de programmation").fadeIn(1500);
+                    $(this).text("Languages de programmation").fadeIn(1500);
                 });
                 $('.i6').animate({left: '100vw'});
                 $(".i6").fadeOut(0);
