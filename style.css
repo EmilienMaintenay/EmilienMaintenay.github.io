@@ -12,7 +12,19 @@ body{
     background-color: #202020;
     margin: 0;
 }
-
+.container {
+  height:100vh;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 10px,
+    rgba(0, 0, 0, 0.3) 10px,
+    rgba(0, 0, 0, 0.3) 20px
+  ),
+  url(images/moi.jpg),
+    linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, 
+    rgba(255, 255, 255, 0) 75%, #A3EF69 100%);
+}
 .caption {
   font-family: "MoonGet";
   position: relative;
@@ -34,53 +46,37 @@ body{
     background-image: url("images/Splatfestisover.jpg");
 }
 
-/* STYLE POUR LA NAVBAR */
-
-.navbar .container, .navbar-inverse {
-  text-align: center;
-  background-color: #303030;
-  border: none;
-}
-.navbar-collapse .navbar-brand {
-  display: inline-block;
-  float: none;
-  padding: 0;
-  margin: 0 !important;
-  overflow: visible;
-}
-
-.navbar-collapse .navbar-brand .logo {
-  width: 161px;
-  height: 161px;
-}
-.rounded-circle {
-    z-index: 0;
-    margin-top : 50%;
-    border-radius: 50%;
-    min-width: 100%;
-}
 
 /* STYLE POUR LA PRESENTATION */
-
+#moi{
+    border-radius: 50%;
+    padding-top: 15vh;
+}
 .present{
     text-align: center;
     color:white;
     position: relative;
     width: 75%;
-    height: calc(100vh - 260px);
+    height: 100vh;
     margin : auto auto 0;
     display: none;
+    
 }
-
+#containtxt{
+    transform: skewX(-50deg);
+    background-color:  #303030;
+    width:75vw;
+    height: 15vh;
+    margin-top: 50px;
+}
 .present p{
     position: absolute;
-    margin-top: 50px;
-    background-color:  #303030;
+    margin-top: 15px;
     font-size: 2vw;
-    border-radius: 25px;
+    transform: skewX(50deg);
 }
 .present h1{
-    margin-top: 25%;
+    margin-top: 20px;
 }
 /* STYLE POUR LE PROJET*/
 
@@ -250,39 +246,59 @@ body{
 .contact-div{
     height: 100vh;
 }
-.ctc{
-    border-radius: 25px;
+.ctcg{
+    position: relative;
+    margin-top:10vh;
+    height: 15vh;
     background-color: #303030;
-    padding-left: 3vw;
-    padding-right: 3vw;
-    padding-top: 3vw;
-    padding-bottom: 3vw;
-    font-size: 10vw;
-    line-height: 10vh;
-    text-decoration: none;
+    transform: skewX(50deg);
+    width: 50%;
+    left:-5vw;
+    display: flex;
 }
-.ctc figcaption{
-    margin-top:5px;
-    font-size:20%;
-    line-height: 80%;
-    padding-bottom: 0px;
+.ctcd{
+    position: relative;
+    margin-top:10vh;
+    height: 15vh;
+    background-color: #303030;
+    transform: skewX(-50deg);
+    width: 50%;
+    right:-55vw;
 }
-a .ctc{
+.ctcg p{
+    padding-top: 3.5vh;
+    font-size:6vh;
+    position: relative;
     color: white;
-    text-decoration: none;
+    transform: skewX(-50deg);
+    left: 7vw;
 }
-a .ctc:hover{
-    color: white;
-    text-decoration: none;
-}
-.icone{
-    margin-top: 30vh;
-    color: white;
+
+#mail{
+    padding-top: 1vh;
     text-align: center;
-    margin-left: 8vw;
-    display: inline-flex;
-     
+    font-size:5vh;
+    height: 10vh;
+   width: 10vw; 
+    display: flex;
 }
+
+#pamail{
+    font-size:4vh;
+    padding-top: 4vh;
+}
+
+.ctcd p{
+    padding-top: 1vh;
+    font-size:4vh;
+    position: relative;
+    color: white;
+    transform: skewX(50deg);
+    left: 7vw;
+}
+
+
+
 #pti{
     font-size: 14%;
 }
