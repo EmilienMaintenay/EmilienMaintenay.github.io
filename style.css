@@ -6,337 +6,59 @@
     font-style: normal;
 
 }
-body{
-    font-family: MoonGet;
-    overflow-x : hidden;
+
+@media (){
+  body{
     background-color: #202020;
-    margin: 0;
-}
-.container {
-  height:100vh;
-  background: repeating-linear-gradient(
-    45deg,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.2) 10px,
-    rgba(0, 0, 0, 0.3) 10px,
-    rgba(0, 0, 0, 0.3) 20px
-  ),
-  url(images/moi.jpg),
-    linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, 
-    rgba(255, 255, 255, 0) 75%, #A3EF69 100%);
-}
-.caption {
-  font-family: "MoonGet";
-  position: relative;
-  left: 0;
-  top: 22%;
-  width: 100%;
-  font-size: 5vh;
-  text-align: center;
-  color: white;
+    background-image: radial-gradient(gray 1%, transparent 2.25%);
+    background-size: 13vw 13vh;
+    background-position: 5.5vw 5.5vh;
+    margin: 0px;
+  }
 }
 
-.titre{
-    font-size: 1vh;
-    background-attachment: fixed;
-    height: 15%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("images/Splatfestisover.jpg");
-}
+@media (min-aspect-ratio: 13/9){
+  body{
+    background-color: #202020;
+    background-image: radial-gradient(gray 1%, transparent 2.25%);
+    background-size: 6vw 13vh;
+    background-position: 2.25vw 5.5vh;
+    margin: 0px;
+  }
 
-
-/* STYLE POUR LA PRESENTATION */
-#moi{
-    border-radius: 50%;
-    padding-top: 15vh;
-}
-.present{
-    text-align: center;
-    color:white;
+  #container{
     position: relative;
-    width: 75%;
-    height: 100vh;
-    margin : auto auto 0;
-    display: none;
-    
-}
-#containtxt{
-    transform: skewX(-50deg);
-    background-color:  #303030;
-    width:75vw;
-    height: 15vh;
-    margin-top: 50px;
-}
-.present p{
-    position: absolute;
-    margin-top: 15px;
-    font-size: 2vw;
-    transform: skewX(50deg);
-}
-.present h1{
-    margin-top: 20px;
-}
-/* STYLE POUR LE PROJET*/
-
-.projet-div{
-    height: 100vh;
-}
-.projets{
-    margin-top: 50px;
-    min-height: 360px;
-    position: relative;
-}
-.un-reste,.deux-reste,.img-princ{
-    cursor: pointer;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    
-}
-.img-princ{
-    color: white;
-    background-image: url(images/projet1ciel.png);
-    left: 50px;
-    position: absolute;
-    top: 0;
-    height: 74vh;
-    width: 100%;
-    transform:  skew(7deg,0deg);
-}
-#img-g{
-    left=-100vw;
-}
-#img-db, #img-dh{
-    right=100vw;
-}
-.un-reste{
-    background-image:url(images/flou.jpg);
-    height: 32vh;
-}
-.deux-reste{
-    margin-top: 5px;
-    height: 32vh;
-    background-image: url(images/ProjetSite.png);
-    background-position: center;
-    background-size: cover;
-}
-.contour-img-princ{
-    border-width: 50px;
-    border-color: gray;
-    position: absolute;
-    margin-left: -10%;
-    min-height: 74vh;
+    left: 29.2vw;
+    top : 51vh;
+    animation: appear 1s ease forwards;
     overflow: hidden;
-    width: 76.5%;
-    transform: skew(-7deg,0deg);
-}
-.le-reste{
-    min-height: 74vh;
-    position: relative;
-    right: -68%;
-    top: 0;
-    width: 40%;
-    transform: skew(-7deg,0deg);
-}
-.contour-le-reste{
-    min-height:41vh;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-}
-.un-reste,.deux-reste{
-    position: absolute;
-    height: 32vh;
-    right: 10%;
-    width: 100%;
-    transform: skew(7deg,0deg);
-}
+  }
 
-#contenup1{
-    display: none;
-}
-/* STYLE POUR LES COMPETENCES */
-.competences-div{
-    height: 100vh;
-}
-.Comp h1{
-    margin-top: 5%;
-    text-align: center;
-    color: white;
-}
-.icons{
-    display: flex;
-}
-#btnrgt, #btnlft {
-    cursor: pointer;
-    z-index: 5;
-    top: 25vh;
-    font-size:500%;
-}
-#btnrgt{
-    left:calc(100vw - 145px);
-}
-.icon p{
+  @keyframes appear {
+    0% {
+      clip-path: polygon(0 0, 5 0,0 100%, 5 100%);
+      width:5px;
+      height:5px;
+    }
+    50%{
+      clip-path: polygon(0 0, 5 0,0 100%, 5 100%);
+      width:5px;
+      height:26vh;
+    }
+    100% {
+      clip-path: polygon(0 0, 5 0,0 100%, 5 100%);
+      width:18.1vw;
+      height:26vh;
+    }
+
+  }
+
+  #contenu{
     position:relative;
-    top:100%;
-}
-#htmlicon{
-    margin-left: 7%;
-    background-image:url(images/html5.svg);
-}
-#cssicon{
-    background-image: url(images/css3.svg);
-}
-#jqueryicon{
-    background-image: url(images/JQuery.png);
-}
-#bootstrapicon{
-    margin-right:7%;
-    background-image: url(images/bootstrap.svg);
-}
-#javaicon{
-    background-image: url(images/java.svg);
-}
-#cicon{
-    background-image: url(images/c.svg);
-}
-#pythonicon{
-    margin-left: 20%;
-    background-image: url(images/python.svg);
-}
-#debianicon{
-    margin-left: 10%;
-    background-image: url(images/debian.svg);
-}
-#SQLicon{
-    margin-right: 10%;
-    background-image: url(images/PostgreSQL.png);
-}
-#umlicon{
-    background-image: url(images/UML.png);
-}
-#giticon{
-    background-image: url(images/git.svg);
-}
-.i5, .i6{
-    margin-right: 17%;
-}
-.i4{
-    margin-right: 20%;
-    display: none;
-}
-.i6{
-    display: none;
-}
-.icon{
-    color: white;
-    top: 12vh;
-    position: absolute;
-    text-align: center;
-    position:relative;
-    height: 20vh;
-    width: 20vh;
-    background-position: center;
-    background-size:contain;
-    background-repeat: no-repeat;
-}
-/* STYLE POUR LE CONTACT */
-.contact-div{
-    height: 100vh;
-}
-.ctcg{
-    position: relative;
-    margin-top:10vh;
-    height: 15vh;
-    background-color: #303030;
-    transform: skewX(50deg);
-    width: 50%;
-    left:-5vw;
-    display: flex;
-}
-.ctcd{
-    position: relative;
-    margin-top:10vh;
-    height: 15vh;
-    background-color: #303030;
-    transform: skewX(-50deg);
-    width: 50%;
-    right:-55vw;
-}
-.ctcg p{
-    padding-top: 3.5vh;
-    font-size:6vh;
-    position: relative;
-    color: white;
-    transform: skewX(-50deg);
-    left: 7vw;
-}
-
-#mail{
-    padding-top: 1vh;
-    text-align: center;
-    font-size:5vh;
-    height: 10vh;
-   width: 10vw; 
-    display: flex;
-}
-
-#pamail{
-    font-size:4vh;
-    padding-top: 4vh;
-}
-
-.ctcd p{
-    padding-top: 1vh;
-    font-size:4vh;
-    position: relative;
-    color: white;
-    transform: skewX(50deg);
-    left: 7vw;
-}
-
-
-
-#pti{
-    font-size: 14%;
-}
-#quit {
-    position: absolute;
-    font-size: 40px;
-    left: 15px;
-    top : 5px;
-}
-#dl{
-    font-size: 40px;
-    color: white;
-    text-decoration: none;
-}
-#dl:hover{
-    
-}
-#contenup1 p{
-    font-size : 150%;
-}
-.img-princ h1{
-    margin-top: 31vh;
-}
-#projetpic img{
-    height: 45vh ;
-    border-color: gray; 
-    margin-left: 50px;
-}
-#projetpic{
-    display: inline-flex;
-}
-#projetpic p{
-    margin-top: 21vh;
-}
-.deux-reste h1, .un-reste h1{
-    color:black;
-    margin-top: 15vh;
-}
-.un-reste h1{
-    color:white;
+    width:18.1vw;
+    height:26vh;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+  }
 }
