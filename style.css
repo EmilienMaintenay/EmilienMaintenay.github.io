@@ -26,35 +26,64 @@
     margin: 0px;
   }
 
+  #grostitre{
+    position:absolute;
+    top:12vh;
+    left:23.2vw;
+    width:54.1125vw;
+    height:26vh;
+    overflow: hidden;
+  }
+
+  #grostitrefond{
+    clip-path:polygon(0 0, 0 100%, 100% 0);
+    background-color: white;
+    animation: grostitremouv 2s ease forwards;
+  }
+
+  @keyframes grostitremouv {
+
+    0% {
+      width:0px;
+      height:0px;
+    }
+    100% {
+      width:108.225vw;
+      height:52vh;
+    }
+  }
+
   #container{
-    position: relative;
+    position:relative;
     width:18.1vw;
     height:26vh;
-    left: 29.2vw;
-    top : 51vh;
-    overflow-x: hidden;
+    top:51vh;
+    left:29.2vw;
+    /*Optionnel*/
+    overflow:hidden;
   }
 
   #contenu1{
-    position: absolute;
+    position:absolute;
     width:18.1vw;
     height:26vh;
-    box-sizing: border-box;
-    border-left: 5px solid white;
-    border-bottom: 5px solid white;
-    animation: appear 1s ease forwards;
+    /*Pour garder les bordures à l'intérieur du div*/
+    box-sizing:border-box;
+    border-left:5px solid white;
+    border-bottom:5px solid white;
+    animation:appear 0.75s ease forwards;
   }
 
   #contenu2{
-    position: absolute;
+    position:absolute;
     bottom:0px;
-    right: 0px;
-    height: 20px;
-    width: 20px;
-    box-sizing: border-box;
-    border-right: 5px solid white;
-    border-top: 5px solid white;
-    animation: appear 1s ease forwards;
+    right:0px;
+    height:20px;
+    width:20px;
+    box-sizing:border-box;
+    border-right:5px solid white;
+    border-top:5px solid white;
+    animation:appear 0.75s ease forwards;
     }
 
   @keyframes appear {
@@ -71,7 +100,33 @@
       width:18.1vw;
       height:26vh;
     }
-
   }
+
+  #contenu3{
+    position: absolute;
+    width:0px;
+    height:0px;
+    clip-path:polygon(0 0, 0 100%, 100% 0);
+    background-color: #ffbf00;
+    animation: slide 1.5s ease forwards;
+  }
+
+  @keyframes slide {
+
+    0% {
+      width:0px;
+      height:0px;
+    }
+    50%{
+      width:0px;
+      height:0px;
+    }
+    100% {
+      width:36.2vw;
+      height:52vh;
+    }
+  }
+
+
 
 }
