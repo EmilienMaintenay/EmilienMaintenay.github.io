@@ -5,13 +5,20 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'UndefinedMedium';
     src: url('fonts/undefined-medium.woff2') format('woff2'),
          url('fonts/undefined-medium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
 
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /*@media (){
@@ -62,15 +69,11 @@
       width:54.1125vw;
       height:5px;
       top:38vh;
-    }/*
-    100%{
-      width:5px;
-      top:50%;
-      height:0px;
-      display: none;
-    }*/
+    }
 
   }
+
+  /*** -MON NOM AVEC LE SUPER EFFET STEREOSCOPIQUE POUR LA NAVBAR ET LE GROS TITRE ***/
 
   #monnomen3D {
     position: absolute;
@@ -127,6 +130,7 @@
     }
   }
 
+  /*** -ANIMATION DES BORDURES DU GROS TITRE ***/
   #borduregauchetitre {
     position:absolute;
     width:5px;
@@ -161,7 +165,7 @@
       height:100%;
     }
   }
-  /***                              ***/
+
   /***   NAVBAR EXTREMEMENT CLASSE  ***/
 
   #navbar{
@@ -333,10 +337,7 @@
     transform: translate(1.5px,1.5px);
   }
 
-
-  #maPhotoContainer{
-
-  }
+/*** LA PREMIERE DE COUVERTURE ***/
 
   #maPhoto{
     position: absolute;
@@ -373,6 +374,7 @@
     box-sizing:border-box;
     overflow:hidden;
     margin-bottom: 14vh;
+    padding : 0px 5.9vw 5.9vw 5.9vw;
     animation:appearPartie 0.75s ease 2.5s forwards;
   }
 
@@ -403,6 +405,7 @@
   @keyframes appearPartie{
     100%{
       height:130vh;
+      overflow: visible;
     }
   }
   @keyframes appearG {
@@ -449,51 +452,46 @@
     }
   }
 
-  #fondPP{
-    position: absolute;
-    width:0px;
-    height:0px;
-    clip-path:polygon(0 0, 0 100%, 100% 0);
-    background-color:gray;
-    animation: slideFond 1.5s ease 4s forwards;
+  #accroche{
+    font-family: 'TheBoldFont';
+    color : white;
+    margin-top : 7vh;
+    font-size: 5em;
+    opacity: 0%;
+    left : 500px;
+    animation: sliding-slideaccroche 0.5s linear 2.8s forwards;
   }
 
-  @keyframes slideFond {
-    100% {
-      width:200%;
-      height:200%;
+  @keyframes sliding-slideaccroche{
+    100%{
+      opacity: 100%;
+      margin-top:10vh;
+    }
+
+  }
+
+  #slidePP{
+    position: absolute;
+    width:500vw;
+    height:140vh;
+    left : 1000vw;
+    z-index: 2;
+    background-color: #FF332C;
+    transform: skewX(110deg);
+    margin-top: -75vh;
+    animation: sliding-slidePP 1s ease 2.5s forwards;
+  }
+
+  @keyframes sliding-slidePP {
+    100%{
+      left : 15vw;
     }
   }
 
-  #containerRayuresPP{
-    position: absolute;
-    overflow: hidden;
-    top:24.75vh;
-    width:0px;
-    height:0px;
-    right:0px;
-    clip-path:polygon(0 0, 100% 0, 100% 100%);
-    animation: slideRayures 1.5s ease 3.5s forwards;
-  }
-
-  #rayuresPP{
-    position: absolute;
-    right: 0px;
-    width:100vw;
-    height:156.5vh;
-    background-image: repeating-linear-gradient(-45deg,#303030 0 3vw,#202020 3vw 6vw);
-  }
-
-  @keyframes slideRayures {
-    100% {
-      width:200vw;
-      height:313vh;
-    }
-  }
-
-  #premierepartie p{
-    z-index: 3;
-    color: white;
+  #accrochetexte{
+    font-family: 'Roboto';
+    font-size: 2em;
+    z-index: 10;
   }
 
   #competences{
